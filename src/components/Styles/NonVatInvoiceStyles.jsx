@@ -72,15 +72,15 @@ export const nonVatStyles = StyleSheet.create({
   invoiceInfoLabel: {
     fontWeight: "bold",
     fontSize: 8,
-    width: "40%", // Added fixed width for labels
-    textAlign: "left", // Changed from default to left
+    width: "40%",
+    textAlign: "left",
   },
   invoiceInfoValue: {
-    width: "60%", // Added fixed width for values
+    width: "60%",
     textAlign: "left",
     fontSize: 8,
-    paddingLeft: 5, // Added some padding
-    wordBreak: "break-word", // Ensures long text wraps
+    paddingLeft: 5,
+    wordBreak: "break-word",
   },
   customerInfo: {
     display: "flex",
