@@ -61,7 +61,7 @@ const NonVatInvoicePDF = ({ data }) => (
               </View>
               <View style={nonVatStyles.invoiceInfoRow}>
                 <Text style={nonVatStyles.invoiceInfoLabel}>PAGE NO.:</Text>
-                <Text style={nonVatStyles.invoiceInfoValue}></Text>
+                <Text style={nonVatStyles.invoiceInfoValue}>15000</Text>
               </View>
             </View>
           </View>
@@ -264,34 +264,49 @@ const NonVatInvoicePDF = ({ data }) => (
 
         {/* Signatures - Modified to 3-column layout */}
         <View style={nonVatStyles.signatures}>
+          {/* Left Column */}
+          <View style={nonVatStyles.signatureCol}>
+            <Text style={nonVatStyles.signatureText}>
+              100 bklts. (50x4) 34001-39000 * RDO (021C)
+            </Text>
+            <Text style={nonVatStyles.signatureText}>
+              BIR Authority to Print No. 21CAU20220000000011
+            </Text>
+            <Text style={nonVatStyles.signatureText}>
+              Date Issue: 01-12-22 Valid until 01-11-2027
+            </Text>
+            <Text style={nonVatStyles.signatureText}>
+              TRIKJANMAE PRINTING PRESS, Poblacion, Porac, Pamp.
+            </Text>
+            <Text style={nonVatStyles.signatureText}>
+              TIN: 262-308-769-000 Non VAT
+            </Text>
+          </View>
+
+          {/* Middle Column */}
+          <View style={nonVatStyles.signatureCol}>
+            <Text style={{ height: 40 }}></Text>
+            <Text style={[nonVatStyles.signatureText, { textAlign: "center" }]}>
+              Printer's Accreditation #{" "}
+              <Text style={{ textDecoration: "underline" }}>
+                21IAMP20180000000001
+              </Text>
+            </Text>
+            <Text style={[nonVatStyles.signatureText, { textAlign: "center" }]}>
+              Date issued:{" "}
+              <Text style={{ textDecoration: "underline" }}>09-11-18</Text>
+            </Text>
+          </View>
+
+          {/* Right Column */}
           <View style={nonVatStyles.signatureCol}>
             <Text style={nonVatStyles.signatureText}>
               Received the above goods and services in good order & condition.
             </Text>
-            <Text style={nonVatStyles.signatureLine}>
-              _______________________________
-            </Text>
+            <Text style={{ height: 20 }}></Text>
+            <Text style={nonVatStyles.signatureLine}></Text>
             <Text style={nonVatStyles.signatureLabel}>
               Customer's Signature Over Printed Name
-            </Text>
-          </View>
-
-          <View style={nonVatStyles.signatureCol}>
-            <Text style={{ height: 20 }}></Text>
-            <Text style={nonVatStyles.signatureLine}>
-              _______________________________
-            </Text>
-          </View>
-
-          <View style={nonVatStyles.signatureCol}>
-            <Text style={nonVatStyles.signatureText}>
-              Printer's Accreditation # ZMP2023-00000000-001
-            </Text>
-            <Text style={nonVatStyles.signatureLine}>
-              _______________________________
-            </Text>
-            <Text style={nonVatStyles.signatureLabel}>
-              Date Issued: 09-11-18
             </Text>
           </View>
         </View>

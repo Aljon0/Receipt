@@ -43,7 +43,7 @@ export const nonVatStyles = StyleSheet.create({
     marginBottom: 2,
   },
   invoiceDetails: {
-    width: "28%",
+    width: "35%", // Increased from 28% to give more space
     textAlign: "right",
     backgroundColor: "#eee",
     padding: 8,
@@ -72,16 +72,20 @@ export const nonVatStyles = StyleSheet.create({
   invoiceInfoLabel: {
     fontWeight: "bold",
     fontSize: 8,
+    width: "40%", // Added fixed width for labels
+    textAlign: "left", // Changed from default to left
   },
   invoiceInfoValue: {
-    minWidth: 100,
+    width: "60%", // Added fixed width for values
     textAlign: "left",
     fontSize: 8,
+    paddingLeft: 5, // Added some padding
+    wordBreak: "break-word", // Ensures long text wraps
   },
   customerInfo: {
     display: "flex",
     flexDirection: "row",
-    marginBottom: 10,
+    marginBottom: 5,
   },
   soldTo: {
     flex: 1,
@@ -152,51 +156,56 @@ export const nonVatStyles = StyleSheet.create({
   termsConditions: {
     fontSize: 7,
     lineHeight: 1.2,
-    margin: "10px 0",
+    margin: "5px 0",
     border: "1px solid #ccc",
     padding: 8,
   },
   termsConditionsTitle: {
     fontWeight: "bold",
     textDecoration: "underline",
-    marginBottom: 3,
+    marginBottom: 0,
     textAlign: "center",
   },
   paymentInfo: {
     textAlign: "center",
     fontWeight: "bold",
-    margin: "10px 0",
+    marginBottom: "10px 0",
     width: "100%",
     backgroundColor: "#f9f9f9",
     padding: "5px 0",
     border: "1px solid #ccc",
     fontSize: 8,
   },
-  // Updated signature styles to match the 3-column layout
   signatures: {
     display: "flex",
     flexDirection: "row",
     justifyContent: "space-between",
     marginTop: 10,
+    borderTop: "1px solid #ccc",
+    paddingTop: 10,
   },
   signatureCol: {
     flex: 1,
-    textAlign: "center",
-    paddingTop: 3,
-    margin: "0 5px",
+    padding: "0 5px",
     fontSize: 8,
+    display: "flex",
+    flexDirection: "column",
   },
   signatureText: {
-    marginBottom: 5,
+    marginBottom: 3,
     textAlign: "left",
     fontSize: 8,
+    lineHeight: 1.2,
   },
   signatureLine: {
+    borderTop: "1px solid #000",
     marginTop: 15,
     marginBottom: 3,
+    width: "100%",
   },
   signatureLabel: {
     fontSize: 8,
+    textAlign: "center",
   },
   nonVatNotice: {
     textAlign: "center",
